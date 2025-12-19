@@ -1,0 +1,72 @@
+SERVER:
+server/
+│
+├── src/
+│   ├── app.js           # Express app config
+│   ├── server.js        # Entry point (listen)
+│
+│   ├── config/
+│   │   ├── db.js        # MongoDB connection
+│   │   └── env.js       # Env validation
+│
+│   ├── models/          # Mongoose schemas
+│   │   └── User.model.js
+│
+│   ├── routes/          # Express routes
+│   │   └── user.routes.js
+│
+│   ├── controllers/     # Request handling logic
+│   │   └── user.controller.js
+│
+│   ├── services/        # Business logic (IMPORTANT)
+│   │   └── user.service.js
+│
+│   ├── middlewares/
+│   │   ├── auth.middleware.js
+│   │   └── error.middleware.js
+│
+│   ├── utils/
+│   │   └── logger.js
+│
+│   └── validations/     # Joi / Zod schemas
+│       └── user.schema.js
+│
+├── tests/
+│
+├── .env
+├── package.json
+└── nodemon.json
+
+
+CLIENT:
+client/
+│
+├── src/
+│   ├── api/             # Axios / fetch logic
+│   │   └── user.api.js
+│
+│   ├── components/      # Reusable UI components
+│   │   └── Button.jsx
+│
+│   ├── features/        # Feature-based structure (BEST PRACTICE)
+│   │   └── auth/
+│   │       ├── AuthPage.jsx
+│   │       ├── auth.slice.js
+│   │       └── auth.api.js
+│
+│   ├── hooks/
+│   ├── layouts/
+│   ├── pages/
+│   ├── routes/
+│   │   └── AppRoutes.jsx
+│
+│   ├── store/           # Redux / Zustand
+│   ├── styles/
+│   ├── utils/
+│
+│   ├── App.jsx
+│   └── main.jsx
+│
+├── public/
+├── .env
+└── package.json
